@@ -2,3 +2,7 @@ tags
 .vagrant
 *.swp
 web_server.log
+
+**/build
+**/install
+**/log
