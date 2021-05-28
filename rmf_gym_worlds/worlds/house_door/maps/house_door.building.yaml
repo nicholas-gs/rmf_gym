@@ -1,0 +1,95 @@
+crowd_sim:
+  agent_groups:
+    - {agents_name: [], agents_number: 0, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+  agent_profiles:
+    - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
+  enable: 0
+  goal_sets:
+    []
+  model_types:
+    []
+  obstacle_set: {class: 1, file_name: L1_navmesh.nav, type: nav_mesh}
+  states:
+    - {final: 1, goal_set: -1, name: external_static, navmesh_file_name: ""}
+  transitions:
+    []
+  update_time_step: 0.1
+levels:
+  L1:
+    doors:
+      - [20, 0, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, 1], name: [1, door1], plugin: [1, normal], type: [1, double_hinged]}]
+    drawing:
+      filename: house_door.png
+    elevation: 0
+    flattened_x_offset: 0
+    flattened_y_offset: 0
+    floors:
+      - parameters: {texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+        vertices: [14, 13, 12, 20, 11, 10, 9, 8, 21, 19, 7, 6, 5, 4, 3, 2, 18, 17, 16, 15]
+    lanes:
+      - [23, 30, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [28, 25, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [25, 24, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [24, 23, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [23, 29, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+    layers:
+      {}
+    measurements:
+      - [26, 27, {distance: [3, 10.61]}]
+    vertices:
+      - [216.198, 204.976, 0, ""]
+      - [169.828, 205.217, 0, ""]
+      - [169.707, 227.017, 0, ""]
+      - [184.401, 227.74, 0, ""]
+      - [185.485, 266.642, 0, ""]
+      - [226.315, 267.004, 0, ""]
+      - [226.195, 282.782, 0, ""]
+      - [187.292, 283.143, 0, ""]
+      - [246.308, 292.658, 0, ""]
+      - [255.342, 292.658, 0, ""]
+      - [255.101, 219.67, 0, ""]
+      - [243.057, 219.188, 0, ""]
+      - [244.261, 133.915, 0, ""]
+      - [244.14, 108.382, 0, ""]
+      - [170.791, 108.261, 0, ""]
+      - [169.948, 138.733, 0, ""]
+      - [192.953, 139.335, 0, ""]
+      - [191.869, 193.895, 0, ""]
+      - [169.467, 194.016, 0, ""]
+      - [187.292, 318.794, 0, ""]
+      - [243.297, 205.819, 0, ""]
+      - [246.67, 319.275, 0, ""]
+      - [255.694, 266.771, 0, ""]
+      - [228.604, 241.5, 0, a_3]
+      - [229.041, 214.434, 0, a_4, {is_parking_spot: [4, true]}]
+      - [229.411, 186.641, 0, a_5, {is_parking_spot: [4, true]}]
+      - [282.84, 108.754, 0, ""]
+      - [283.242, 320.954, 0, ""]
+      - [227.612, 138.258, 0, a_1]
+      - [229.002, 255.8, 0, a_0, {is_charger: [4, true]}]
+      - [250.274, 242.666, 0, a_2, {is_charger: [4, true]}]
+    walls:
+      - [0, 1, {alpha: [3, 1], texture_name: [1, default]}]
+      - [1, 2, {alpha: [3, 1], texture_name: [1, default]}]
+      - [2, 3, {alpha: [3, 1], texture_name: [1, default]}]
+      - [3, 4, {alpha: [3, 1], texture_name: [1, default]}]
+      - [4, 5, {alpha: [3, 1], texture_name: [1, default]}]
+      - [5, 6, {alpha: [3, 1], texture_name: [1, default]}]
+      - [6, 7, {alpha: [3, 1], texture_name: [1, default]}]
+      - [8, 9, {alpha: [3, 1], texture_name: [1, default]}]
+      - [9, 10, {alpha: [3, 1], texture_name: [1, default]}]
+      - [10, 11, {alpha: [3, 1], texture_name: [1, default]}]
+      - [11, 12, {alpha: [3, 1], texture_name: [1, default]}]
+      - [12, 13, {alpha: [3, 1], texture_name: [1, default]}]
+      - [13, 14, {alpha: [3, 1], texture_name: [1, default]}]
+      - [14, 15, {alpha: [3, 1], texture_name: [1, default]}]
+      - [15, 16, {alpha: [3, 1], texture_name: [1, default]}]
+      - [16, 17, {alpha: [3, 1], texture_name: [1, default]}]
+      - [17, 18, {alpha: [3, 1], texture_name: [1, default]}]
+      - [18, 1, {alpha: [3, 1], texture_name: [1, default]}]
+      - [7, 19, {alpha: [3, 1], texture_name: [1, default]}]
+      - [8, 21, {alpha: [3, 1], texture_name: [1, default]}]
+      - [21, 19, {alpha: [3, 1], texture_name: [1, default]}]
+lifts:
+  {}
+name: house
