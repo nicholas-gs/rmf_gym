@@ -1,34 +1,32 @@
+coordinate_system: reference_image
 crowd_sim:
   agent_groups:
     - {agents_name: [], agents_number: 0, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
   agent_profiles:
     - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
   enable: 0
-  goal_sets:
-    []
-  model_types:
-    []
+  goal_sets: []
+  model_types: []
   obstacle_set: {class: 1, file_name: L1_navmesh.nav, type: nav_mesh}
   states:
     - {final: 1, goal_set: -1, name: external_static, navmesh_file_name: ""}
-  transitions:
-    []
+  transitions: []
   update_time_step: 0.1
+graphs:
+  {}
 levels:
   L1:
     drawing:
       filename: base.png
     elevation: 0
-    flattened_x_offset: 0
-    flattened_y_offset: 0
     floors:
-      - parameters: {texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [7, 4, 5, 6]
     lanes:
-      - [10, 11, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 1], orientation: [1, ""]}]
-      - [8, 12, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
-      - [12, 13, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
-      - [13, 9, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [10, 11, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 1], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [8, 12, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [12, 13, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [13, 9, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
     layers:
       {}
     measurements:
@@ -43,17 +41,16 @@ levels:
       - [3004.655, 1570.354, 0, ""]
       - [125.203, 1571.918, 0, ""]
       - [126.743, 38.206, 0, ""]
-      - [385.824, 744.09, 0, 0_a, {is_charger: [4, true]}]
-      - [2714.55, 744.09, 0, 0_b]
-      - [1554.321, 416.139, 0, 1_a, {is_charger: [4, true]}]
-      - [1554.321, 1179.52, 0, 1_b]
+      - [385.824, 744.09, 0, 0a, {is_charger: [4, true]}]
+      - [2714.55, 744.09, 0, 0b]
+      - [1554.321, 416.139, 0, 1a, {is_charger: [4, true]}]
+      - [1554.321, 1179.52, 0, 1b]
       - [1383.456, 744.09, 0, "", {is_parking_spot: [4, true]}]
       - [1716.918, 744.09, 0, "", {is_parking_spot: [4, true]}]
     walls:
-      - [7, 6, {alpha: [3, 1], texture_name: [1, default]}]
-      - [6, 5, {alpha: [3, 1], texture_name: [1, default]}]
-      - [5, 4, {alpha: [3, 1], texture_name: [1, default]}]
-      - [4, 7, {alpha: [3, 1], texture_name: [1, default]}]
-lifts:
-  {}
+      - [7, 6, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [6, 5, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [5, 4, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [4, 7, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+lifts: {}
 name: building
